@@ -26,7 +26,6 @@ public:
 
 private:
     std::vector<std::vector<Tile*>> tiles;
-    std::vector<std::vector<int>> mineOrNot;
     int xMines;
     int yMines;
     PlayStatus playStatus;

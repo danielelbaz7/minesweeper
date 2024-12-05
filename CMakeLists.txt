@@ -9,7 +9,16 @@ find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 add_executable(MineSweeper
         main.cpp
         Toolbox.h
-        Toolbox.cpp)
+        Toolbox.cpp
+        Button.h
+        Button.cpp
+        GameState.h
+        GameState.cpp
+        Tile.h
+        Tile.cpp
+        minesweeper.h
+        minesweeper.cpp
+)
 
 target_link_libraries(MineSweeper sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 

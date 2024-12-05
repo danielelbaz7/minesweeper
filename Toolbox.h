@@ -23,7 +23,7 @@ public:
     Button* testButton1;
     Button* testButton2;
 
-    static Toolbox &getInstance() {
+    static Toolbox& getInstance() {
         static Toolbox instance;
         return instance;
     }

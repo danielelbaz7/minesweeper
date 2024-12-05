@@ -11,16 +11,27 @@
 Toolbox* TB = &Toolbox::getInstance();
 
 void restart() {
-    delete Toolbox::getInstance().gameState;
-    TB->gameState = new GameState();
+
 }
+
 
 void render() {
     for(int i = 0; i < TB->yMineCount; i++) {
         for(int j = 0; j < TB->xMineCount; j++) {
-            TB->gameState->getTile(j, i)->draw();
+            TB->gameState->getTile(i, j)->draw();
         }
     }
+    sf::Sprite newGameButtonSprite = *TB->newGameButton->getSprite();
+    newGameButtonSprite.setPosition(TB->newGameButton->getPosition());
+    TB->window.draw(newGameButtonSprite);
+
+    sf::Sprite button1Sprite = *TB->testButton1->getSprite();
+    button1Sprite.setPosition(TB->testButton1->getPosition());
+    TB->window.draw(button1Sprite);
+
+    sf::Sprite button2Sprite = *TB->testButton2->getSprite();
+    button2Sprite.setPosition(TB->testButton2->getPosition());
+    TB->window.draw(button2Sprite);
 }
 
 int launch() {
@@ -31,6 +42,7 @@ int launch() {
                 TB->window.close();
         }
         TB->window.clear(sf::Color::White);
+        render();
         TB->window.display();
     }
     return 0;

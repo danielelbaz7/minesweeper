@@ -14,7 +14,7 @@
 class Tile {
 public:
     enum State {REVEALED, HIDDEN, FLAGGED, EXPLODED};
-    Tile(sf::Vector2f position) {location = position;};
+    Tile(sf::Vector2f position) {location = position; thisState = REVEALED;};
     sf::Vector2f getLocation() {return location;};
     State getState() {return thisState;};
     std::array<Tile*, 8>& getNeighbors() {return neighbors;};

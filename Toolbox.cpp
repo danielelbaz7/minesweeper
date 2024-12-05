@@ -14,12 +14,16 @@ Toolbox::Toolbox() {
     gameState = new GameState();
     sf::Vector2f pos = sf::Vector2f(368, 512);
     newGameButton = new Button(pos, restart);
-    sf::Vector2f pos1 = sf::Vector2f(600, 512);
+    newGameButton->setSprite(new sf::Sprite(getAllTextures.at(2)));
+    sf::Vector2f pos1 = sf::Vector2f(560, 512);
     testButton1 = new Button(pos1, restart);
-    sf::Vector2f pos2 = sf::Vector2f(600, 512);
+    testButton1->setSprite(new sf::Sprite(getAllTextures.at(15)));
+    sf::Vector2f pos2 = sf::Vector2f(624, 512);
     testButton2 = new Button(pos2, restart);
+    testButton2->setSprite(new sf::Sprite(getAllTextures.at(16)));
     sf::Vector2f pos3 = sf::Vector2f(600, 512);
     debugButton = new Button(pos3, restart);
+
 
     xMineCount = gameState->xMines;
     yMineCount = gameState->yMines;

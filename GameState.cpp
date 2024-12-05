@@ -10,13 +10,11 @@ GameState::GameState(const char *filepath) {
     std::ifstream boardFile(filepath);
 
     std::string currentLine;
-    std::vector<int> row;
     std::vector<Tile*> tileRow;
     int rowCount = 0;
     while(std::getline(boardFile, currentLine)) {
         int colCount = 0;
         for(char &c : currentLine) {
-            row.push_back(static_cast<int>(c));
             sf::Vector2f tilePos(rowCount, colCount);
             Tile* currentTile;
             if(c == '1') {
@@ -28,7 +26,6 @@ GameState::GameState(const char *filepath) {
             tileRow.push_back(currentTile);
             colCount++;
         }
-        mineOrNot.push_back(row);
         tiles.push_back(tileRow);
     }
 
@@ -40,22 +37,36 @@ GameState::GameState(const char *filepath) {
 }
 
 GameState::GameState(sf::Vector2i _dimensions, int _numberOfMines) {
+    playStatus = PLAYING;
+    tiles.clear();
+    for(auto& row : tiles) {
+        row.resize(_dimensions.x);
+    }
     std::set<int> mines;
+    std::srand(std::time(nullptr));
+
     while(mines.size() < _numberOfMines) {
-        int randomNumber = rand() % _dimensions.x * _dimensions.y;
+        int randomNumber = rand() % (_dimensions.x * _dimensions.y);
         mines.insert(randomNumber);
     }
 
     for(int i = 0; i < _dimensions.x; i++) {
+        std::vector<Tile*> tileRow;
         for(int j = 0; j < _dimensions.y; j++) {
+            sf::Vector2f tilePos(i, j);
             if(mines.contains(i * _dimensions.x + j)) {
-
+                MineTile* currentTile = new MineTile(tilePos);
+                tileRow.push_back(currentTile);
+            } else {
+                Tile* currentTile = new Tile(tilePos);
+                tileRow.push_back(currentTile);
             }
         }
+        tiles.push_back(tileRow);
     }
 
-    yMines = tiles.size();
-    xMines = tiles[0].size();
+    yMines = _dimensions.y;
+    xMines = _dimensions.x;
 
 }
 
