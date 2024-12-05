@@ -36,4 +36,3 @@ int launch() {
     return 0;
 }
 
-int main() {return launch();}

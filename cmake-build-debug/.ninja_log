@@ -1,19 +1,10 @@
 # ninja log v6
-6	441	1733428592973068664	CMakeFiles/MineSweeper.dir/Toolbox.cpp.o	4d7f19fe0a946db1
-6	421	1733428592973299412	CMakeFiles/MineSweeper.dir/Tile.cpp.o	8fa11644e5e1d1fc
-5	427	1733428592972549001	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
-3	378	1733357250682833665	CMakeFiles/MineSweeper.dir/main.cpp.o	97febee1b0eea5ee
+3	443	1733429937658791248	CMakeFiles/MineSweeper.dir/Toolbox.cpp.o	4d7f19fe0a946db1
+3	417	1733429937658923538	CMakeFiles/MineSweeper.dir/Tile.cpp.o	8fa11644e5e1d1fc
+2	426	1733429937658646665	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
+3	341	1733430023422900098	CMakeFiles/MineSweeper.dir/main.cpp.o	97febee1b0eea5ee
 9	574	1733341492317864305	CMakeFiles/MineSweeper.dir/Button.cpp.o	1d7dcbd725691c21
 5	539	1733362223315439782	CMakeFiles/MineSweeper.dir/GameState.cpp.o	eed912a5bcfe483e
-2	90	1733428799509030506	MineSweeper	1e659f663b766771
-1	55	1733428802141628639	build.ninja	a1c5a5507ba3c8eb
-2	402	1733428826645016441	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
-402	484	1733428827044334639	MineSweeper	1e659f663b766771
-3	395	1733428864506182417	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
-396	483	1733428864898960457	MineSweeper	1e659f663b766771
-2	393	1733428882791421235	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
-393	477	1733428883182558246	MineSweeper	1e659f663b766771
-5	427	1733428991637883842	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
-427	513	1733428992059264664	MineSweeper	1e659f663b766771
-3	401	1733429002269677481	CMakeFiles/MineSweeper.dir/minesweeper.cpp.o	bf99d1d8dba428fe
-402	485	1733429002667869230	MineSweeper	1e659f663b766771
+2	90	1733430115478340960	MineSweeper	322cbe775f6cac3
+1	55	1733430161863077749	build.ninja	a1c5a5507ba3c8eb
+2	426	1733430168026665136	CMakeFiles/MineSweeper.dir/Toolbox.cpp.o	4d7f19fe0a946db1

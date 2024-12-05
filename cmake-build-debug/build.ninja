@@ -49,8 +49,8 @@ cmake_ninja_workdir = /Users/dyonah/CLionProjects/MineSweeper/cmake-build-debug/
 
 build cmake_object_order_depends_target_MineSweeper: phony || .
 
-build CMakeFiles/MineSweeper.dir/minesweeper.cpp.o: CXX_COMPILER__MineSweeper_unscanned_Debug /Users/dyonah/CLionProjects/MineSweeper/minesweeper.cpp || cmake_object_order_depends_target_MineSweeper
-  DEP_FILE = CMakeFiles/MineSweeper.dir/minesweeper.cpp.o.d
+build CMakeFiles/MineSweeper.dir/main.cpp.o: CXX_COMPILER__MineSweeper_unscanned_Debug /Users/dyonah/CLionProjects/MineSweeper/main.cpp || cmake_object_order_depends_target_MineSweeper
+  DEP_FILE = CMakeFiles/MineSweeper.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
   INCLUDES = -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/MineSweeper.dir
@@ -58,27 +58,6 @@ build CMakeFiles/MineSweeper.dir/minesweeper.cpp.o: CXX_COMPILER__MineSweeper_un
 
 build CMakeFiles/MineSweeper.dir/Toolbox.cpp.o: CXX_COMPILER__MineSweeper_unscanned_Debug /Users/dyonah/CLionProjects/MineSweeper/Toolbox.cpp || cmake_object_order_depends_target_MineSweeper
   DEP_FILE = CMakeFiles/MineSweeper.dir/Toolbox.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/MineSweeper.dir
-  OBJECT_FILE_DIR = CMakeFiles/MineSweeper.dir
-
-build CMakeFiles/MineSweeper.dir/Button.cpp.o: CXX_COMPILER__MineSweeper_unscanned_Debug /Users/dyonah/CLionProjects/MineSweeper/Button.cpp || cmake_object_order_depends_target_MineSweeper
-  DEP_FILE = CMakeFiles/MineSweeper.dir/Button.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/MineSweeper.dir
-  OBJECT_FILE_DIR = CMakeFiles/MineSweeper.dir
-
-build CMakeFiles/MineSweeper.dir/Tile.cpp.o: CXX_COMPILER__MineSweeper_unscanned_Debug /Users/dyonah/CLionProjects/MineSweeper/Tile.cpp || cmake_object_order_depends_target_MineSweeper
-  DEP_FILE = CMakeFiles/MineSweeper.dir/Tile.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/MineSweeper.dir
-  OBJECT_FILE_DIR = CMakeFiles/MineSweeper.dir
-
-build CMakeFiles/MineSweeper.dir/GameState.cpp.o: CXX_COMPILER__MineSweeper_unscanned_Debug /Users/dyonah/CLionProjects/MineSweeper/GameState.cpp || cmake_object_order_depends_target_MineSweeper
-  DEP_FILE = CMakeFiles/MineSweeper.dir/GameState.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
   INCLUDES = -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/MineSweeper.dir
@@ -92,7 +71,7 @@ build CMakeFiles/MineSweeper.dir/GameState.cpp.o: CXX_COMPILER__MineSweeper_unsc
 #############################################
 # Link the executable MineSweeper
 
-build MineSweeper: CXX_EXECUTABLE_LINKER__MineSweeper_Debug CMakeFiles/MineSweeper.dir/minesweeper.cpp.o CMakeFiles/MineSweeper.dir/Toolbox.cpp.o CMakeFiles/MineSweeper.dir/Button.cpp.o CMakeFiles/MineSweeper.dir/Tile.cpp.o CMakeFiles/MineSweeper.dir/GameState.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.6.2.dylib /opt/homebrew/lib/libsfml-network.2.6.2.dylib /opt/homebrew/lib/libsfml-audio.2.6.2.dylib /opt/homebrew/lib/libsfml-window.2.6.2.dylib /opt/homebrew/lib/libsfml-system.2.6.2.dylib
+build MineSweeper: CXX_EXECUTABLE_LINKER__MineSweeper_Debug CMakeFiles/MineSweeper.dir/main.cpp.o CMakeFiles/MineSweeper.dir/Toolbox.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.6.2.dylib /opt/homebrew/lib/libsfml-network.2.6.2.dylib /opt/homebrew/lib/libsfml-audio.2.6.2.dylib /opt/homebrew/lib/libsfml-window.2.6.2.dylib /opt/homebrew/lib/libsfml-system.2.6.2.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.6.2.dylib  /opt/homebrew/lib/libsfml-network.2.6.2.dylib  /opt/homebrew/lib/libsfml-audio.2.6.2.dylib  -framework Cocoa  -framework OpenGL  -framework IOKit  -framework CoreFoundation  -framework CoreVideo  /opt/homebrew/lib/libsfml-window.2.6.2.dylib  /opt/homebrew/lib/libsfml-system.2.6.2.dylib
   OBJECT_DIR = CMakeFiles/MineSweeper.dir

@@ -7,16 +7,9 @@ set(SFML_DIR "/opt/homebrew/opt/sfml")
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
 add_executable(MineSweeper
-        minesweeper.cpp
-        minesweeper.h
-        Toolbox.cpp
+        main.cpp
         Toolbox.h
-        Button.cpp
-        Button.h
-        Tile.cpp
-        Tile.h
-        GameState.cpp
-        GameState.h)
+        Toolbox.cpp)
 
 target_link_libraries(MineSweeper sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 
