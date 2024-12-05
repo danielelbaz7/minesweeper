@@ -18,4 +18,8 @@ add_executable(MineSweeper
         GameState.cpp
         GameState.h)
 
-target_link_libraries(MineSweeper sfml-graphics sfml-audio sfml-system)
+target_link_libraries(MineSweeper sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
+
+target_link_libraries(MineSweeper sfml-system sfml-window sfml-graphics sfml-network sfml-audio
+        "-framework Cocoa" "-framework OpenGL" "-framework IOKit" "-framework CoreFoundation" "-framework CoreVideo")
+

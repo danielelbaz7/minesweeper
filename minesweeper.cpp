@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 #include "minesweeper.h"
 #include "Toolbox.h"
@@ -23,12 +24,14 @@ void render() {
 }
 
 int launch() {
-    while (TB->window.isOpen()) {
+    while (Toolbox::getInstance().window.isOpen()) {
         sf::Event event;
         while (TB->window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 TB->window.close();
         }
+        TB->window.clear(sf::Color::White);
+        TB->window.display();
     }
     return 0;
 }
