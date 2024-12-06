@@ -101,24 +101,24 @@ void GameState::createNeighborList() {
                 neighborList[7] = nullptr;
             }
 
-            for(int i = 0; i < 8; i++) {
-                if(neighborList[i] != nullptr) {
-                    if(i == 0) {
-                        neighborList[i] = tiles[i-1][j-1];
-                    } else if (i == 1) {
-                        neighborList[i] = tiles[i-1][j];
-                    } else if (i == 2) {
-                        neighborList[i] = tiles[i-1][j+1];
-                    } else if (i == 3) {
-                        neighborList[i] = tiles[i][j-1];
-                    } else if (i == 4) {
-                        neighborList[i] = tiles[i][j+1];
-                    } else if (i == 5) {
-                        neighborList[i] = tiles[i+1][j-1];
-                    } else if (i == 6) {
-                        neighborList[i] = tiles[i+1][j];
-                    } else if (i == 7) {
-                        neighborList[i] = tiles[i+1][j+1];
+            for(int k = 0; k < 8; k++) {
+                if(neighborList[k] != nullptr) {
+                    if(k == 0) {
+                        neighborList[k] = tiles[i-1][j-1];
+                    } else if (k == 1) {
+                        neighborList[k] = tiles[i-1][j];
+                    } else if (k == 2) {
+                        neighborList[k] = tiles[i-1][j+1];
+                    } else if (k == 3) {
+                        neighborList[k] = tiles[i][j-1];
+                    } else if (k == 4) {
+                        neighborList[k] = tiles[i][j+1];
+                    } else if (k == 5) {
+                        neighborList[k] = tiles[i+1][j-1];
+                    } else if (k == 6) {
+                        neighborList[k] = tiles[i+1][j];
+                    } else if (k == 7) {
+                        neighborList[k] = tiles[i+1][j+1];
                     }
                 }
             }
