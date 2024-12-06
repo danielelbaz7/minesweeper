@@ -14,13 +14,13 @@
 class Tile {
 public:
     enum State {REVEALED, HIDDEN, FLAGGED, EXPLODED};
-    Tile(sf::Vector2f position) {location = position; thisState = REVEALED;};
-    sf::Vector2f getLocation() {return location;};
-    State getState() {return thisState;};
-    std::array<Tile*, 8>& getNeighbors() {return neighbors;};
-    void setState(State _state) {thisState = _state;};
+    Tile(sf::Vector2f position) {location = position; thisState = HIDDEN;}
+    sf::Vector2f getLocation() {return location;}
+    State getState() {return thisState;}
+    std::array<Tile*, 8>& getNeighbors() {return neighbors;}
+    void setState(State _state) {thisState = _state;}
     void setNeighbors(std::array<Tile*, 8> _neighbors) {neighbors = _neighbors;}
-    void onClickLeft() {thisState = REVEALED;};
+    void onClickLeft();
     void onClickRight() {
         if(thisState == HIDDEN) {
             thisState = FLAGGED;
@@ -36,18 +36,20 @@ private:
     int type;
     void initializeTile();
 
-protected:
+    sf::RenderTexture rt;
     State thisState;
+protected:
     void revealNeighbors() {
         for(Tile* neighbor : neighbors) {
-            neighbor->setState(REVEALED);
+            if(neighbor != nullptr && neighbor->getState() == HIDDEN) {
+                neighbor->onClickLeft();
+            }
         }};
 };
 
 class MineTile : public Tile {
 public:
     MineTile(sf::Vector2f position) : Tile(position) {};
-    void onClickLeft() {thisState = EXPLODED;}
 };
 
 

@@ -28,15 +28,16 @@ public:
         return instance;
     }
 
-
     int xMineCount;
     int yMineCount;
+
+    bool debug;
+
 
 private:
     Toolbox();
     static void callBoardOne();
     static void callBoardTwo();
-
 
 };
 
